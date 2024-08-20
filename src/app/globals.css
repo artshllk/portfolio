@@ -2,32 +2,71 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --background: 246 46% 37%;
+    --foreground: 210 40% 96.1%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 42 79% 54%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --accent: 247 50% 28%;
+    --accent-foreground: 246 64% 75%;
+    --border: 247 91% 68%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+    --radius: 0.5rem;
+    --destructive: 0 96% 74%;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
+@layer base {
+  * {
+    @apply border-border;
+  }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  h1 {
+    @apply md:text-7xl text-5xl !leading-[1.10];
+  }
+
+  h1 span,
+  h3 span {
+    @apply text-primary;
+  }
+
+  h3 {
+    @apply sm:text-3xl text-2xl font-semibold;
+  }
+
+  h5 {
+    @apply text-accent-foreground font-medium text-lg;
+  }
+
+  h6 {
+    @apply text-foreground font-medium text-lg;
+  }
+
+  p {
+    @apply sm:text-base text-sm;
+  }
+
+  li,
+  p,
+  button,
+  a,
+  h4,
+  h5 {
+    @apply tracking-wider
+  }
+
+  button:disabled {
+    @apply opacity-50
   }
 }

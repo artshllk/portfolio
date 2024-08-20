@@ -6,6 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Button } from "../ui/button";
+import MobileMenu from "./MobileMenu";
 
 export default function Menu() {
   const pathname = usePathname();
@@ -36,7 +37,11 @@ export default function Menu() {
             );
           })}
         </ul>
-        <Button variant>Get in Touch</Button>
+        <Button variant="outline" className="md:inline-block hidden">
+          Get in Touch
+        </Button>
+
+        <MobileMenu pathname={pathname} />
       </nav>
     </header>
   );

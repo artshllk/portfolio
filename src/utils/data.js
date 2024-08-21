@@ -1,3 +1,6 @@
+import { LinkedinIcon } from "lucide-react";
+
+// routes
 export const ROUTES = Object.freeze([
   {
     id: 1,
@@ -23,5 +26,21 @@ export const ROUTES = Object.freeze([
     id: 5,
     name: "Contact",
     path: "/contact",
+  },
+]);
+
+// social media
+export const SOCIAL_MEDIA = Object.freeze([
+  {
+    id: 1,
+    name: "LinkedIn",
+    url: "https://www.linkedin.com/in/art-shllaku/",
+    icon: "/linkedin.png",
+  },
+  {
+    id: 2,
+    name: "GitHub",
+    url: "https://github.com/artshllk",
+    icon: "/github.png",
   },
 ]);

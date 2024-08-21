@@ -7,23 +7,44 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Button } from "../ui/button";
 import MobileMenu from "./MobileMenu";
+import { MotionButton, MotionImage, MotionList } from "@/utils/motionTags";
+import { transition, variants } from "@/utils/framer_variants";
 
 export default function Menu() {
   const pathname = usePathname();
   return (
     <header
       className={cn(
-        "fixed z-50 left-0 right-0 bg-background border-b border-border/25"
+        "fixed z-50 left-0 right-0",
+        pathname !== "/" && "bg-background border-b border-border/25"
       )}
     >
       <nav className="container py-4 flex justify-between items-center">
         <Link href={"/"}>
-          <Image alt="logo" width={60} height={45} />
+          <MotionImage
+            src="/logo.png"
+            alt="logo"
+            width={60}
+            height={45}
+            variants={variants.scale}
+            transition={transition.scale}
+            animate="animate"
+            initial="initial"
+          />
         </Link>
         <ul className="md:flex hidden items-center text-[17px] gap-6 font-medium">
-          {ROUTES.map((route) => {
+          {ROUTES.map((route, index) => {
             return (
-              <li key={route.id}>
+              <MotionList
+                key={route.id}
+                variants={variants.moveDown}
+                animate="animate"
+                initial="initial"
+                transition={{
+                  ...transition.moveDown,
+                  delay: index * 0.3,
+                }}
+              >
                 <Link
                   href={route.path}
                   className={cn(
@@ -33,13 +54,20 @@ export default function Menu() {
                 >
                   {route.name}
                 </Link>
-              </li>
+              </MotionList>
             );
           })}
         </ul>
-        <Button variant="outline" className="md:inline-block hidden">
+        <MotionButton
+          variant="outline"
+          className="md:inline-block hidden"
+          variants={variants.moveLeft}
+          transition={transition.moveLeft}
+          animate="animate"
+          initial="initial"
+        >
           Get in Touch
-        </Button>
+        </MotionButton>
 
         <MobileMenu pathname={pathname} />
       </nav>

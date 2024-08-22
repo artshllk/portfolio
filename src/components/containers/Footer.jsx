@@ -10,13 +10,13 @@ export default function Footer() {
       <div className="flex sm:flex-row flex-col sm:items-center sm:gap-0 gap-5 justify-between container py-3">
         <Image src="/logo.png" alt="logo" width={40} height={40} />
         <h3 className="sm:text-2xl text-xl">
-          Discover a <span>gateway</span> to unparalleled <br />
-          <span>design</span> creativity.
+          Bringing your ideas to life through <span>code</span> and <br />
+          <span>creativity</span>.
         </h3>
       </div>
       {/* Copyright content */}
       <div className="bg-accent text-center py-8 text-accent-foreground">
-        <p>Copyright @ 2024. All right reserved.</p>
+        <p>Copyright @ 2024. All rights reserved.</p>
       </div>
     </footer>
   );

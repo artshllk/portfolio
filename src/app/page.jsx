@@ -94,8 +94,7 @@ export default function page() {
             ...transition.moveLeft,
             duration: 1.2,
           }}
-          src="/art.png"
-          className="object-cover max-h-full"
+          className="object-cover max-h-full "
         />
       </div>
     </div>

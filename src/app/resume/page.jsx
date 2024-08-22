@@ -17,7 +17,7 @@ export default function page() {
         {/* Profile */}
         <div className="flex md:flex-row flex-col gap-x-7 sm:gap-y-0 gap-y-4 items-center">
           <MotionImage
-            src="/images/dddresume/profile.jpg"
+            src="/art.jpeg"
             alt="profile"
             width={155}
             height={155}
@@ -25,7 +25,7 @@ export default function page() {
             transition={transition.scale}
             animate="animate"
             initial="initial"
-            className="md:w-36 w-28"
+            className="md:w-36 w-28 rounded-full"
           />
           <MotionDiv
             variants={variants.moveDown}
@@ -37,7 +37,7 @@ export default function page() {
             <h3 className="mb-2">
               Art <span>Shllaku.</span>
             </h3>
-            <h5>Kosovo</h5>
+            <h5>Pristina, Kosovo</h5>
           </MotionDiv>
         </div>
         <MotionButton
@@ -75,6 +75,7 @@ export default function page() {
           <SkillsSection />
         </TabsContent>
 
+        {/* Feature: Experience section can be better to make as carosel */}
         <TabsContent value="experience">
           <ExperienceSection />
         </TabsContent>

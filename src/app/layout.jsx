@@ -3,6 +3,7 @@ import "./globals.css";
 import { cn } from "@/lib/utils";
 import Menu from "@/components/containers/Menu";
 import Footer from "@/components/containers/Footer";
+import { Toaster } from "@/components/ui/toaster";
 
 const anek = Anek_Latin({ subsets: ["latin"] });
 
@@ -18,6 +19,7 @@ export default function RootLayout({ children }) {
         <Menu />
         <main className="min-h-screen">{children}</main>
         <Footer />
+        <Toaster />
       </body>
     </html>
   );

@@ -6,13 +6,13 @@ import Image from "next/image";
 export default function page() {
   return (
     <div className="container grid place-items-center h-screen 2xl:pt-0 pt-20">
-      <div className="absolute left-0 right-0 bottom-0 top-[94px] sm:bg-accent">
+      <div className="absolute left-0 right-0 bottom-0 top-[94px] sm:bg-accent 2xl:bg-accent">
         <Image
-          // src={"/map.png"}
+          src={"/world.jpg"}
           alt="map"
           width={1200}
           height={450}
-          className="w-full h-full object-contain"
+          className="w-full h-full opacity-5"
         />
       </div>
 

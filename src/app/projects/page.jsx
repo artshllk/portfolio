@@ -15,6 +15,8 @@ import Image from "next/image";
 import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+import { ChevronLeft } from "lucide-react";
+import { ChevronRight } from "lucide-react";
 
 export default function Projects() {
   const [currentProject, setCurrentProject] = useState(PROJECTS[0]);
@@ -83,7 +85,7 @@ export default function Projects() {
               <TooltipProvider delayDuration={200}>
                 <Tooltip>
                   <TooltipTrigger asChild>
-                    <button className="bg-accent p-2.5 rounded-full">
+                    <button className="bg-slate-200 p-2.5 rounded-full">
                       <Image
                         src={"/github.png"}
                         alt="github"
@@ -98,7 +100,7 @@ export default function Projects() {
                 </Tooltip>
                 <Tooltip>
                   <TooltipTrigger asChild>
-                    <button className="bg-accent p-2.5 rounded-full">
+                    <button className="bg-slate-200 p-2.5 rounded-full">
                       <Image
                         src={"/open.png"}
                         alt="live preview"
@@ -147,18 +149,15 @@ export default function Projects() {
             </Swiper>
             <div className="flex ml-6 mt-4 gap-x-4">
               <button onClick={prev} disabled={index === 1}>
-                <Image
-                  src={"/back.png"}
-                  alt="prev"
+                <ChevronLeft
                   width={55}
                   height={55}
                   className="cursor-pointer"
                 />
               </button>
+
               <button onClick={nextTo} disabled={index === PROJECTS.length}>
-                <Image
-                  src={"/next.png"}
-                  alt="next"
+                <ChevronRight
                   width={55}
                   height={55}
                   className="cursor-pointer"

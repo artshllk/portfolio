@@ -1,11 +1,14 @@
+"use client";
+
 import { cn } from "@/lib/utils";
 import { SOCIAL_MEDIA } from "@/utils/data";
 import { transition, variants } from "@/utils/framer_variants";
 import { MotionButton, MotionDiv, MotionImage } from "@/utils/motionTags";
 import { DownloadIcon } from "lucide-react";
 import { Luckiest_Guy } from "next/font/google";
+import CV from "../../public/assets/CV.pdf";
 
-const luck = Luckiest_Guy({
+const font = Luckiest_Guy({
   subsets: ["latin"],
   weight: ["400"],
 });
@@ -40,7 +43,7 @@ export default function page() {
           animate="animate"
           variants={variants.moveRight}
           transition={transition.moveRight}
-          className={cn("md:text-right text-center", luck.className)}
+          className={cn("md:text-right text-center", font.className)}
         >
           <h1>
             Art <br />
@@ -48,36 +51,42 @@ export default function page() {
           </h1>
         </MotionDiv>
         <br />
-        <MotionButton
-          whileHover={{ scale: 0.95 }}
-          initial="initial"
-          animate="animate"
-          variants={variants.moveUp}
-          transition={transition.moveUp}
-        >
-          <DownloadIcon className="mr-2" />
-          Download CV
-        </MotionButton>
-
-        <div className="flex items-center gap-x-3 md:absolute bottom-6 left-2">
+        <a href={CV} download="CV" target="_blank">
+          <MotionButton
+            whileHover={{ scale: 0.95 }}
+            initial="initial"
+            animate="animate"
+            variants={variants.moveUp}
+            transition={transition.moveUp}
+          >
+            <DownloadIcon className="mr-2" />
+            Download CV
+          </MotionButton>
+        </a>
+        <div className="flex items-center gap-x-4 bottom-6 left-2">
           {SOCIAL_MEDIA.map((item, index) => {
             return (
-              <MotionImage
+              <a
                 key={item.id}
-                src={item.icon}
-                alt={item.name}
-                height={25}
-                width={25}
-                whileHover={{ scale: 1.1 }}
-                variants={variants.moveUp}
-                transition={{
-                  ...transition.moveUp,
-                  duration: index * 0.4,
-                }}
-                initial="initial"
-                animate="animate"
-                className="object-cover cursor-pointer max-h-full"
-              />
+                href={item.url}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <MotionDiv
+                  whileHover={{ scale: 1.2, rotate: 10 }}
+                  whileTap={{ scale: 0.9 }}
+                  variants={variants.moveUp}
+                  transition={{
+                    ...transition.moveUp,
+                    duration: index * 0.3,
+                  }}
+                  initial="initial"
+                  animate="animate"
+                  className="flex items-center justify-center h-12 w-12 rounded-full bg-gradient-to-r from-indigo-500 to-purple-500 shadow-lg"
+                >
+                  {item.icon}
+                </MotionDiv>
+              </a>
             );
           })}
         </div>

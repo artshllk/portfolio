@@ -58,17 +58,18 @@ export default function Menu() {
             );
           })}
         </ul>
-        <MotionButton
-          variant="outline"
-          className="md:inline-block hidden"
-          variants={variants.moveLeft}
-          transition={transition.moveLeft}
-          animate="animate"
-          initial="initial"
-        >
-          Get in Touch
-        </MotionButton>
-
+        <Link href="/contact">
+          <MotionButton
+            variant="outline"
+            className="md:inline-block hidden"
+            variants={variants.moveLeft}
+            transition={transition.moveLeft}
+            animate="animate"
+            initial="initial"
+          >
+            Get in Touch
+          </MotionButton>
+        </Link>
         <MobileMenu pathname={pathname} />
       </nav>
     </header>

@@ -1,3 +1,6 @@
+import { Github } from "lucide-react";
+import { Linkedin } from "lucide-react";
+
 // routes
 export const ROUTES = Object.freeze([
   {
@@ -33,13 +36,13 @@ export const SOCIAL_MEDIA = Object.freeze([
     id: 1,
     name: "LinkedIn",
     url: "https://www.linkedin.com/in/art-shllaku/",
-    icon: "/linkedin.png",
+    icon: <Linkedin />,
   },
   {
     id: 2,
     name: "GitHub",
     url: "https://github.com/artshllk",
-    icon: "/github.png",
+    icon: <Github />,
   },
 ]);
 

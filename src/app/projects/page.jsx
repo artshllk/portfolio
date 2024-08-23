@@ -1,26 +1,25 @@
 "use client";
-
-import { Badge } from "@/components/ui/badge";
+import Image from "next/image";
+import { useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
 import { PROJECTS } from "@/utils/data";
 import { transition, variants } from "@/utils/framer_variants";
 import { MotionDiv } from "@/utils/motionTags";
-import Image from "next/image";
-import { useState } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import { ChevronLeft } from "lucide-react";
-import { ChevronRight } from "lucide-react";
 
 export default function Projects() {
   const [currentProject, setCurrentProject] = useState(PROJECTS[0]);
   const [swiper, setSwiper] = useState(null);
+
   const onSlideChange = (item) => {
     setCurrentProject(PROJECTS[item?.activeIndex]);
   };
@@ -37,10 +36,7 @@ export default function Projects() {
   };
 
   return (
-    <div
-      className="grid place-items-center lg:pt-0 sm:pt-32 pt-20
-    min-h-screen container"
-    >
+    <div className="grid place-items-center lg:pt-0 sm:pt-32 pt-20 min-h-screen container">
       <div className="mt-12">
         <MotionDiv
           animate="animate"
@@ -70,7 +66,7 @@ export default function Projects() {
               {currentProject?.desc}
             </p>
             <div className="mt-2 text-primary font-semibold tracking-wider space-x-2">
-              {currentProject?.stack?.map((item, index) => (
+              {currentProject?.stack?.map((item) => (
                 <Badge
                   key={item}
                   variant={"outline"}
@@ -83,36 +79,50 @@ export default function Projects() {
             <br />
             <div className="flex gap-x-3">
               <TooltipProvider delayDuration={200}>
-                <Tooltip>
-                  <TooltipTrigger asChild>
-                    <button className="bg-slate-200 p-2.5 rounded-full">
-                      <Image
-                        src={"/github.png"}
-                        alt="github"
-                        width={40}
-                        height={40}
-                      />
-                    </button>
-                  </TooltipTrigger>
-                  <TooltipContent>
-                    <p>Github</p>
-                  </TooltipContent>
-                </Tooltip>
-                <Tooltip>
-                  <TooltipTrigger asChild>
-                    <button className="bg-slate-200 p-2.5 rounded-full">
-                      <Image
-                        src={"/open.png"}
-                        alt="live preview"
-                        width={40}
-                        height={40}
-                      />
-                    </button>
-                  </TooltipTrigger>
-                  <TooltipContent>
-                    <p>Live Preview</p>
-                  </TooltipContent>
-                </Tooltip>
+                {currentProject?.github && (
+                  <Tooltip>
+                    <TooltipTrigger asChild>
+                      <a
+                        href={currentProject.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="bg-slate-200 p-2.5 rounded-full"
+                      >
+                        <Image
+                          src="/github.png"
+                          alt="GitHub"
+                          width={40}
+                          height={40}
+                        />
+                      </a>
+                    </TooltipTrigger>
+                    <TooltipContent>
+                      <p>GitHub</p>
+                    </TooltipContent>
+                  </Tooltip>
+                )}
+                {currentProject?.preview && (
+                  <Tooltip>
+                    <TooltipTrigger asChild>
+                      <a
+                        href={currentProject.preview}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="bg-slate-200 p-2.5 rounded-full"
+                      >
+                        <Image
+                          src="/open.png"
+                          alt="Live Preview"
+                          width={40}
+                          height={40}
+                        />
+                      </a>
+                    </TooltipTrigger>
+                    <TooltipContent>
+                      <p>Live Preview</p>
+                    </TooltipContent>
+                  </Tooltip>
+                )}
               </TooltipProvider>
             </div>
           </div>
@@ -140,9 +150,9 @@ export default function Projects() {
                   <Image
                     src={project.image}
                     alt={project.title}
-                    width={200}
-                    height={600}
-                    className="object-contain"
+                    width={1000}
+                    height={800}
+                    className=""
                   />
                 </SwiperSlide>
               ))}

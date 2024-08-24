@@ -22,10 +22,10 @@ export default function page() {
           animate="animate"
           variants={variants.rise}
           transition={transition.rise}
-          className="absolute flex items-center gap-x-4 -rotate-90 md:-left-8 -left-28 md:top-auto top-96 text-accent-foreground"
+          className="absolute flex items-center gap-x-4 sm:-rotate-90 md:-left-8 -left-28 md:top-auto top-96 text-accent-foreground"
         >
           <MotionDiv
-            className="border-4 size-14 rounded-full grid place-items-center"
+            className="border-4 size-14 rounded-full grid place-items-center ml-10"
             initial={{ scale: 0.8 }}
             animate={{ scale: 1.1 }}
             transition={{
@@ -36,7 +36,7 @@ export default function page() {
           >
             <div className="size-3 rounded-full bg-accent-foreground"></div>
           </MotionDiv>
-          <h4 className="text-2xl">Automation Engineer</h4>
+          <h4 className="text-2xl w-[20rem]">Automation Engineer</h4>
         </MotionDiv>
         <MotionDiv
           initial="initial"

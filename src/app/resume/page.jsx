@@ -1,6 +1,7 @@
 import AboutSection from "@/components/AboutSection";
 import ExperienceSection from "@/components/ExperienceSection";
 import SkillsSection from "@/components/SkillsSection";
+import { Carousel } from "@/components/ui/carousel";
 import { TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { transition, variants } from "@/utils/framer_variants";
 import {
@@ -76,9 +77,11 @@ export default function page() {
         </TabsContent>
 
         {/* Feature: Experience section can be better to make as carosel */}
-        <TabsContent value="experience">
-          <ExperienceSection />
-        </TabsContent>
+        <Carousel>
+          <TabsContent value="experience">
+            <ExperienceSection />
+          </TabsContent>
+        </Carousel>
       </MotionTabs>
     </div>
   );

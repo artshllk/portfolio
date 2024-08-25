@@ -7,6 +7,7 @@ import { MotionButton, MotionDiv, MotionImage } from "@/utils/motionTags";
 import { DownloadIcon } from "lucide-react";
 import { Luckiest_Guy } from "next/font/google";
 import CV from "../../public/assets/CV.pdf";
+import Script from "next/script";
 
 const font = Luckiest_Guy({
   subsets: ["latin"],
@@ -22,7 +23,7 @@ export default function page() {
           animate="animate"
           variants={variants.rise}
           transition={transition.rise}
-          className="absolute flex items-center gap-x-4 sm:-rotate-90 md:-left-8 -left-28 md:top-auto top-96 text-accent-foreground"
+          className="absolute flex items-center gap-x-4 md:-rotate-90 md:-left-8 -left-28 md:top-auto top-96 text-accent-foreground"
         >
           <MotionDiv
             className="border-4 size-14 rounded-full grid place-items-center ml-10"
@@ -91,20 +92,17 @@ export default function page() {
           })}
         </div>
       </div>
-      <div className="flex md:max-w-[50%] max-w-lg items-end self-end">
-        <MotionImage
-          alt="art"
-          height={720}
-          width={720}
-          initial="initial"
-          animate="animate"
-          variants={variants.moveLeft}
-          transition={{
-            ...transition.moveLeft,
-            duration: 1.2,
-          }}
-          className="object-cover max-h-full "
-        />
+      <div className="flex md:max-w-[50%] max-w-lg items-end self-end justify-center w-[100%]">
+        <Script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></Script>
+        <lottie-player
+          src="/assets/lotties/lottie.json"
+          background="transparent"
+          speed="1"
+          direction="1"
+          mode="normal"
+          loop
+          autoplay
+        ></lottie-player>
       </div>
     </div>
   );

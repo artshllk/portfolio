@@ -23,7 +23,7 @@ export default function page() {
           animate="animate"
           variants={variants.rise}
           transition={transition.rise}
-          className="absolute flex items-center gap-x-4 md:-rotate-90 md:-left-8 -left-28 md:top-auto top-96 text-accent-foreground"
+          className="absolute flex items-center gap-x-4 md:-rotate-90 md:-left-8 -left-28 md:top-auto md:shrink-0 shrink-0 mt-[22rem] text-accent-foreground"
         >
           <MotionDiv
             className="border-4 size-14 rounded-full grid place-items-center ml-10"

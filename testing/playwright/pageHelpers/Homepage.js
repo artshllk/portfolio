@@ -5,7 +5,7 @@ export class Homepage {
   page;
   isMobile;
   isDesktop;
-  constructor(page, isMobile, isDesktop) {
+  constructor(page, isMobile) {
     this.page = page;
     this.isMobile = isMobile;
     this.isDesktop = !isMobile;
@@ -13,6 +13,7 @@ export class Homepage {
 
   async gotoHomepage() {
     const url = getBaseUrl();
+    console.log("->>>>>>>>>>>>>", url);
     await this.page.goto(url);
   }
 

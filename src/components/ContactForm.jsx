@@ -107,7 +107,7 @@ const ContactForm = () => {
         </div>
 
         <div>
-          <Button variant="outline" type="submit" size="sm">
+          <Button variant="outline" type="submit" size="sm" className="w-full">
             Submit
           </Button>
         </div>

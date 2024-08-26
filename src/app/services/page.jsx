@@ -16,7 +16,7 @@ export default function page() {
           transition={transition.moveUp}
         >
           <h3>
-            Services <span>Offerd</span>
+            Services <span>Offered</span>
           </h3>
         </MotionDiv>
 
@@ -40,7 +40,6 @@ export default function page() {
                     alt={service.name}
                     width={55}
                     height={55}
-                    className=""
                   />
                   <h3 className="">
                     <span>{service.name.split(" ")[0]}</span>

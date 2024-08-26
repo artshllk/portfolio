@@ -41,16 +41,28 @@ export default function page() {
             <h5>Pristina, Kosovo</h5>
           </MotionDiv>
         </div>
-        <MotionButton
-          variants={variants.moveDown}
-          transition={transition.moveDown}
-          animate="animate"
-          initial="initial"
-          variant="outline"
-          size="lg"
-        >
-          Automation Engineer
-        </MotionButton>
+        <div className="flex flex-col gap-3 lg:flex-row md:flex-row">
+          <MotionButton
+            variants={variants.moveDown}
+            transition={transition.moveDown}
+            animate="animate"
+            initial="initial"
+            variant="outline"
+            size="lg"
+          >
+            Automation Engineer
+          </MotionButton>
+          <MotionButton
+            variants={variants.moveUp}
+            transition={transition.moveUp}
+            animate="animate"
+            initial="initial"
+            variant="outline"
+            size="lg"
+          >
+            Frontend Engineer
+          </MotionButton>
+        </div>
       </div>
       {/* profile details */}
       <MotionTabs

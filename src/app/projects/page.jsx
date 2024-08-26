@@ -168,8 +168,8 @@ export default function Projects() {
 
               <button onClick={nextTo} disabled={index === PROJECTS.length}>
                 <ChevronRight
-                  width={55}
-                  height={55}
+                  width={60}
+                  height={60}
                   className="cursor-pointer"
                 />
               </button>

@@ -57,17 +57,17 @@ export const SERVICES = Object.freeze([
   },
   {
     id: 2,
+    name: "Frontend Engineer",
+    icon: "/assets/front-end.png",
+    description:
+      "I can develop and design user interfaces for your web application. I have experience with React.js and other frontend technologies.",
+  },
+  {
+    id: 3,
     name: "Manual Testing",
     icon: "/manual.png",
     description:
       "I can also perform manual testing of your web application to identify any bugs or usability issues. This can be a valuable way to catch issues that automation may miss.",
-  },
-  {
-    id: 3,
-    name: "Frontend Engineer",
-    icon: "/front-end.png",
-    description:
-      "I can develop and design user interfaces for your web application. I have experience with React.js and other frontend technologies.",
   },
 ]);
 

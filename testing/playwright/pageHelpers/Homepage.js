@@ -17,8 +17,8 @@ export class Homepage {
     await this.page.goto(url);
   }
 
-  async assert() {
-    const test = this.page.getByText("Home");
-    await expect(test).toBeVisible();
+  async assert(link) {
+    const homeSelector = this.page.locator("a").getByText(link);
+    await expect(homeSelector).toBeVisible();
   }
 }

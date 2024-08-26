@@ -6,6 +6,6 @@ test.describe("Home page test", () => {
     const homepage = new Homepage(page, isMobile);
 
     await homepage.gotoHomepage();
-    await homepage.assert();
+    await homepage.assert("Home");
   });
 });

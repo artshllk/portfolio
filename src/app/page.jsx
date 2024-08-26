@@ -26,7 +26,7 @@ export default function page() {
           className="absolute flex items-center gap-x-4 md:-rotate-90 md:-left-8 -left-28 md:top-auto md:shrink-0 shrink-0 mt-[22rem] text-accent-foreground"
         >
           <MotionDiv
-            className="border-4 size-14 rounded-full grid place-items-center ml-10"
+            className="border-4 size-14 rounded-full grid place-items-center"
             initial={{ scale: 0.8 }}
             animate={{ scale: 1.1 }}
             transition={{

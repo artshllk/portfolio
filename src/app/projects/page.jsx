@@ -15,10 +15,13 @@ import { cn } from "@/lib/utils";
 import { PROJECTS } from "@/utils/data";
 import { transition, variants } from "@/utils/framer_variants";
 import { MotionDiv } from "@/utils/motionTags";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function Projects() {
   const [currentProject, setCurrentProject] = useState(PROJECTS[0]);
   const [swiper, setSwiper] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedImage, setSelectedImage] = useState(null);
 
   const onSlideChange = (item) => {
     setCurrentProject(PROJECTS[item?.activeIndex]);
@@ -33,6 +36,16 @@ export default function Projects() {
 
   const prev = () => {
     swiper.slidePrev();
+  };
+
+  const openModal = (image) => {
+    setSelectedImage(image);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setSelectedImage(null);
   };
 
   return (
@@ -146,13 +159,14 @@ export default function Projects() {
                 <SwiperSlide
                   key={project.id}
                   className={cn(index - 1 !== i && "opacity-45")}
+                  onClick={() => openModal(project.image)}
                 >
                   <Image
                     src={project.image}
                     alt={project.title}
                     width={1000}
                     height={800}
-                    className=""
+                    className="rounded-2xl shadow-2xl cursor-pointer"
                   />
                 </SwiperSlide>
               ))}
@@ -177,6 +191,34 @@ export default function Projects() {
           </div>
         </MotionDiv>
       </div>
+
+      <AnimatePresence>
+        {isModalOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50"
+            onClick={closeModal}
+          >
+            <motion.div
+              initial={{ scale: 0.8 }}
+              animate={{ scale: 1 }}
+              exit={{ scale: 0.8 }}
+              className="relative"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <Image
+                src={selectedImage}
+                alt="Selected Project"
+                width={1000}
+                height={800}
+                className="rounded-lg"
+              />
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }

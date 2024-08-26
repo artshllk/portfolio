@@ -80,7 +80,13 @@ export const PROJECTS = Object.freeze([
     github: "https://github.com/artshllk/portfolio",
     preview: "https://artshllaku-portfolio.vercel.app/",
     image: "/assets/portfolio.png",
-    stack: ["Next.js", "shadcn/ui", "Tailwind CSS", "Playwright"],
+    stack: [
+      "Next.js",
+      "shadcn/ui",
+      "Tailwind CSS",
+      "Playwright",
+      "Github Actions",
+    ],
   },
   {
     id: 2,

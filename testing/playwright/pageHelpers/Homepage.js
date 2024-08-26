@@ -1,4 +1,5 @@
 import { expect } from "@playwright/test";
+import { getBaseUrl } from "../utils/namespace";
 
 export class Homepage {
   page;
@@ -11,7 +12,8 @@ export class Homepage {
   }
 
   async gotoHomepage() {
-    await this.page.goto("http://localhost:3000/");
+    const url = getBaseUrl();
+    await this.page.goto(url);
   }
 
   async assert() {

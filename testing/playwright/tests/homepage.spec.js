@@ -1,5 +1,5 @@
 import test from "@playwright/test";
-import { Homepage } from "../testing/playwright/pageHelpers/Homepage";
+import { Homepage } from "../pageHelpers/Homepage";
 
 test.describe("Home page test", () => {
   test("gotoHomepage", async ({ page, isMobile }) => {

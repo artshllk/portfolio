@@ -33,7 +33,7 @@ export default function page() {
           data-qa="motion-div"
         >
           <MotionDiv
-            className="border-4 size-14 rounded-full grid place-items-center"
+            className="border-4 size-14 rounded-full grid place-items-center ml-10"
             initial={{ scale: 0.8 }}
             animate={{ scale: 1.1 }}
             transition={{

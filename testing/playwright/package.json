@@ -5,7 +5,7 @@
     "scripts": {
         "setup": "pnpm install --save-dev @playwright/test@latest && pnpm exec playwright install --with-deps",
         "start": "pnpm exec playwright test --ui",
-        "debug": "pnpm exec playwright test --ui --debug",
+        "debug": "PWDEBUG=1 pnpm exec playwright test --ui",
         "report": "pnpm exec playwright show-report"
     },
     "devDependencies": {

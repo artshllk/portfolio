@@ -44,6 +44,7 @@ export default function page() {
           animate="animate"
           variants={variants.moveRight}
           transition={transition.moveRight}
+          data-qa="header"
           className={cn("md:text-right text-center", font.className)}
         >
           <h1>

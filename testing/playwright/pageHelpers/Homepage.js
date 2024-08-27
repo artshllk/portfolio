@@ -13,7 +13,6 @@ export class Homepage {
 
   async gotoHomepage() {
     const url = getBaseUrl();
-    console.log("->>>>>>>>>>>>>", url);
     await this.page.goto(url);
   }
 

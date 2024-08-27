@@ -1,6 +1,11 @@
 export function getBaseUrl() {
-  const defaultLocalUrl = "http://localhost:3000/";
-  const productionUrl = "https://artshllaku-portfolio.vercel.app/";
+  let isProduction = false;
+  let productionUrl = "https://artshllaku-portfolio.vercel.app/";
+  let defaultLocalUrl = "http://localhost:3000/";
 
-  return productionUrl || defaultLocalUrl;
+  if (process.env.PRODUCTION_BASE_URL) {
+    isProduction = true;
+  }
+
+  return isProduction ? productionUrl : defaultLocalUrl;
 }

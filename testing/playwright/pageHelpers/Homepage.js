@@ -1,6 +1,5 @@
 import { expect } from "@playwright/test";
 import { getBaseUrl } from "../utils/namespace";
-
 export class Homepage {
   page;
   isMobile;
@@ -22,7 +21,7 @@ export class Homepage {
   }
 
   async checkHeader() {
-    const header = await this.page.locator("[data-qa='header']");
+    const header = this.page.locator("[data-qa='header']");
     await expect(header).toBeVisible();
   }
 }

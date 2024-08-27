@@ -24,4 +24,10 @@ export class Homepage {
     const header = this.page.locator("[data-qa='header']");
     await expect(header).toBeVisible();
   }
+
+  async clickDownloadCV() {
+    const downloadButton = this.page.locator('[data-qa="download-button"]');
+    await expect(downloadButton).toBeVisible();
+    await downloadButton.click();
+  }
 }

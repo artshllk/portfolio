@@ -24,7 +24,6 @@ export default function page() {
         transition={transition.moveUp}
       >
         <div className="text-center max-w-[600px] mx-auto">
-          {/* Set max width */}
           <h3>
             <span className="text-yellow-500 font-bold">Let&apos;s</span>{" "}
             collaborate to elevate <br /> your{" "}

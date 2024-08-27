@@ -58,11 +58,13 @@ export default function MobileMenu({ pathname }) {
             })}
           </DrawerHeader>
 
-          <DrawerFooter className={"pb-10"}>
-            <Button variant="outline" className="md:hidden mx-auto">
-              Get in Touch
-            </Button>
-          </DrawerFooter>
+          <Link href="/contact">
+            <DrawerFooter className={"pb-10"}>
+              <Button variant="outline" className="md:hidden mx-auto">
+                Get in Touch
+              </Button>
+            </DrawerFooter>
+          </Link>
         </div>
       </DrawerContent>
     </Drawer>

@@ -3,5 +3,5 @@ export function getBaseUrl() {
   let productionUrl = "https://artshllaku-portfolio.vercel.app/";
   let defaultLocalUrl = "http://localhost:3000/";
 
-  return isProduction ? productionUrl : defaultLocalUrl;
+  return isProduction ? productionUrl : defaultLocalUrl;  
 }

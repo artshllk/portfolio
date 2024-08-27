@@ -59,11 +59,13 @@ const ContactForm = () => {
       })
       .catch((err) => console.log(err));
   };
+
   return (
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
         className="grid sm:grid-cols-2 items-center gap-4 mt-10"
+        data-qa="contact-form"
       >
         <FormField
           control={form.control}
@@ -71,7 +73,7 @@ const ContactForm = () => {
           render={({ field }) => (
             <FormItem>
               <FormControl>
-                <Input placeholder="Name" {...field} />
+                <Input placeholder="Name" {...field} data-qa="input-name" />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -84,7 +86,7 @@ const ContactForm = () => {
           render={({ field }) => (
             <FormItem>
               <FormControl>
-                <Input placeholder="Email" {...field} />
+                <Input placeholder="Email" {...field} data-qa="input-email" />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -98,7 +100,11 @@ const ContactForm = () => {
             render={({ field }) => (
               <FormItem>
                 <FormControl>
-                  <Textarea placeholder="Type your message here" {...field} />
+                  <Textarea
+                    placeholder="Type your message here"
+                    {...field}
+                    data-qa="textarea-message"
+                  />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -107,7 +113,13 @@ const ContactForm = () => {
         </div>
 
         <div>
-          <Button variant="outline" type="submit" size="sm" className="w-full">
+          <Button
+            variant="outline"
+            type="submit"
+            size="sm"
+            className="w-full"
+            data-qa="submit-button"
+          >
             Submit
           </Button>
         </div>

@@ -49,14 +49,18 @@ export default function Projects() {
   };
 
   return (
-    <div className="grid place-items-center lg:pt-0 sm:pt-32 pt-20 min-h-screen container">
-      <div className="mt-12">
+    <div
+      className="grid place-items-center lg:pt-0 sm:pt-32 pt-20 min-h-screen container"
+      data-qa="projects-container"
+    >
+      <div className="mt-12" data-qa="projects-section">
         <MotionDiv
           animate="animate"
           initial="initial"
           variants={variants.moveUp}
           transition={transition.moveUp}
           className="text-center mb-10"
+          data-qa="projects-header"
         >
           <h3>
             My <span>Projects</span>
@@ -69,28 +73,39 @@ export default function Projects() {
           variants={variants.moveDown}
           transition={transition.moveDown}
           className="flex lg:flex-row flex-col-reverse lg:gap-0 gap-10 lg:pb-0 pb-7 items-center w-full"
+          data-qa="projects-content"
         >
-          <div className="flex-1 space-y-3">
-            <h2 className="text-6xl font-semibold text-primary">
+          <div className="flex-1 space-y-3" data-qa="project-info">
+            <h2
+              className="text-6xl font-semibold text-primary"
+              data-qa="project-index"
+            >
               {index < 10 ? `0${index}` : index}
             </h2>
-            <h3>{currentProject?.title}</h3>
-            <p className="w-10/12 text-accent-foreground">
+            <h3 data-qa="project-title">{currentProject?.title}</h3>
+            <p
+              className="w-10/12 text-accent-foreground"
+              data-qa="project-description"
+            >
               {currentProject?.desc}
             </p>
-            <div className="mt-2 text-primary font-semibold tracking-wider space-x-2">
+            <div
+              className="mt-2 text-primary font-semibold tracking-wider space-x-2"
+              data-qa="project-stack"
+            >
               {currentProject?.stack?.map((item) => (
                 <Badge
                   key={item}
                   variant={"outline"}
                   className={"text-primary text-base"}
+                  data-qa={`project-stack-item-${item}`}
                 >
                   {item}
                 </Badge>
               ))}
             </div>
             <br />
-            <div className="flex gap-x-3">
+            <div className="flex gap-x-3" data-qa="project-links">
               <TooltipProvider delayDuration={200}>
                 {currentProject?.github && (
                   <Tooltip>
@@ -100,6 +115,7 @@ export default function Projects() {
                         target="_blank"
                         rel="noopener noreferrer"
                         className="bg-slate-200 p-2.5 rounded-full"
+                        data-qa="github-link"
                       >
                         <Image
                           src="/github.png"
@@ -122,6 +138,7 @@ export default function Projects() {
                         target="_blank"
                         rel="noopener noreferrer"
                         className="bg-slate-200 p-2.5 rounded-full"
+                        data-qa="live-preview-link"
                       >
                         <Image
                           src="/open.png"
@@ -140,7 +157,10 @@ export default function Projects() {
             </div>
           </div>
           {/* swiper */}
-          <div className="flex-1 flex items-center flex-col">
+          <div
+            className="flex-1 flex items-center flex-col"
+            data-qa="swiper-container"
+          >
             <Swiper
               breakpoints={{
                 499: {
@@ -154,12 +174,14 @@ export default function Projects() {
               className="w-full md:max-w-lg max-w-[250px]"
               onSlideChange={onSlideChange}
               onSwiper={(s) => setSwiper(s)}
+              data-qa="swiper"
             >
               {PROJECTS.map((project, i) => (
                 <SwiperSlide
                   key={project.id}
                   className={cn(index - 1 !== i && "opacity-45")}
                   onClick={() => openModal(project.image)}
+                  data-qa={`project-slide-${i}`}
                 >
                   <Image
                     src={project.image}
@@ -167,12 +189,17 @@ export default function Projects() {
                     width={1000}
                     height={800}
                     className="rounded-2xl shadow-2xl cursor-pointer"
+                    data-qa={`project-image-${i}`}
                   />
                 </SwiperSlide>
               ))}
             </Swiper>
-            <div className="flex ml-6 mt-4 gap-x-4">
-              <button onClick={prev} disabled={index === 1}>
+            <div className="flex ml-6 mt-4 gap-x-4" data-qa="swiper-navigation">
+              <button
+                onClick={prev}
+                disabled={index === 1}
+                data-qa="prev-button"
+              >
                 <ChevronLeft
                   width={55}
                   height={55}
@@ -180,7 +207,11 @@ export default function Projects() {
                 />
               </button>
 
-              <button onClick={nextTo} disabled={index === PROJECTS.length}>
+              <button
+                onClick={nextTo}
+                disabled={index === PROJECTS.length}
+                data-qa="next-button"
+              >
                 <ChevronRight
                   width={60}
                   height={60}
@@ -200,6 +231,7 @@ export default function Projects() {
             exit={{ opacity: 0 }}
             className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50"
             onClick={closeModal}
+            data-qa="modal-overlay"
           >
             <motion.div
               initial={{ scale: 0.8 }}
@@ -207,6 +239,7 @@ export default function Projects() {
               exit={{ scale: 0.8 }}
               className="relative"
               onClick={(e) => e.stopPropagation()}
+              data-qa="modal-content"
             >
               <Image
                 src={selectedImage}
@@ -214,6 +247,7 @@ export default function Projects() {
                 width={1000}
                 height={800}
                 className="rounded-lg"
+                data-qa="modal-image"
               />
             </motion.div>
           </motion.div>

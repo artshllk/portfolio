@@ -13,10 +13,19 @@ import {
 
 export default function page() {
   return (
-    <div className="max-w-4xl mx-auto min-h-screen pt-32 2xl:pt-60 pb-4">
-      <div className="flex md:flex-row flex-col items-center justify-between gap-7 md:gap-0 w-full">
+    <div
+      className="max-w-4xl mx-auto min-h-screen pt-32 2xl:pt-60 pb-4"
+      data-qa="page-container"
+    >
+      <div
+        className="flex md:flex-row flex-col items-center justify-between gap-7 md:gap-0 w-full"
+        data-qa="profile-section"
+      >
         {/* Profile */}
-        <div className="flex md:flex-row flex-col gap-x-7 sm:gap-y-0 gap-y-4 items-center">
+        <div
+          className="flex md:flex-row flex-col gap-x-7 sm:gap-y-0 gap-y-4 items-center"
+          data-qa="profile-details"
+        >
           <MotionImage
             src="/art.jpeg"
             alt="profile"
@@ -27,6 +36,7 @@ export default function page() {
             animate="animate"
             initial="initial"
             className="md:w-36 w-28 rounded-full"
+            data-qa="profile-image"
           />
           <MotionDiv
             variants={variants.moveDown}
@@ -34,14 +44,18 @@ export default function page() {
             animate="animate"
             initial="initial"
             className="sm:text-left text-center"
+            data-qa="profile-info"
           >
-            <h3 className="mb-2">
+            <h3 className="mb-2" data-qa="profile-name">
               Art <span>Shllaku.</span>
             </h3>
-            <h5>Pristina, Kosovo</h5>
+            <h5 data-qa="profile-location">Pristina, Kosovo</h5>
           </MotionDiv>
         </div>
-        <div className="flex flex-col gap-3 lg:flex-row md:flex-row">
+        <div
+          className="flex flex-col gap-3 lg:flex-row md:flex-row"
+          data-qa="button-section"
+        >
           <MotionButton
             variants={variants.moveDown}
             transition={transition.moveDown}
@@ -49,6 +63,7 @@ export default function page() {
             initial="initial"
             variant="outline"
             size="lg"
+            data-qa="automation-engineer-button"
           >
             Automation Engineer
           </MotionButton>
@@ -59,6 +74,7 @@ export default function page() {
             initial="initial"
             variant="outline"
             size="lg"
+            data-qa="frontend-engineer-button"
           >
             Frontend Engineer
           </MotionButton>
@@ -72,25 +88,31 @@ export default function page() {
         initial="initial"
         className="leading-7 mt-10"
         defaultValue="about"
+        data-qa="tabs"
       >
         {/* Tabs Menu */}
-        <TabsList>
-          <TabsTrigger value="about">About</TabsTrigger>
-          <TabsTrigger value="skills">Skills</TabsTrigger>
-          <TabsTrigger value="experience">Experience</TabsTrigger>
+        <TabsList data-qa="tabs-list">
+          <TabsTrigger value="about" data-qa="about-tab">
+            About
+          </TabsTrigger>
+          <TabsTrigger value="skills" data-qa="skills-tab">
+            Skills
+          </TabsTrigger>
+          <TabsTrigger value="experience" data-qa="experience-tab">
+            Experience
+          </TabsTrigger>
         </TabsList>
         {/* Tabs Content */}
-        <TabsContent value="about">
+        <TabsContent value="about" data-qa="about-content">
           <AboutSection />
         </TabsContent>
 
-        <TabsContent value="skills">
+        <TabsContent value="skills" data-qa="skills-content">
           <SkillsSection />
         </TabsContent>
 
-        {/* Feature: Experience section can be better to make as carosel */}
-        <Carousel>
-          <TabsContent value="experience">
+        <Carousel data-qa="carousel">
+          <TabsContent value="experience" data-qa="experience-content">
             <ExperienceSection />
           </TabsContent>
         </Carousel>

@@ -6,7 +6,10 @@ import Image from "next/image";
 
 export default function page() {
   return (
-    <div className="container min-h-screen grid place-items-center pb-7 pt-32">
+    <div
+      className="container min-h-screen grid place-items-center pb-7 pt-32"
+      data-qa="services-container"
+    >
       <div>
         <MotionDiv
           className="text-center"
@@ -14,13 +17,17 @@ export default function page() {
           animate="animate"
           variants={variants.moveUp}
           transition={transition.moveUp}
+          data-qa="services-header"
         >
           <h3>
             Services <span>Offered</span>
           </h3>
         </MotionDiv>
 
-        <div className="flex flex-wrap justify-center gap-8 mt-11">
+        <div
+          className="flex flex-wrap justify-center gap-8 mt-11"
+          data-qa="services-list"
+        >
           {SERVICES.map((service, index) => {
             return (
               <MotionDiv
@@ -33,20 +40,28 @@ export default function page() {
                   ...transition.moveRight,
                   delay: index * 0.6,
                 }}
+                data-qa={`service-item-${service.id}`}
               >
-                <div className="flex flex-col justify-center items-center">
+                <div
+                  className="flex flex-col justify-center items-center"
+                  data-qa={`service-content-${service.id}`}
+                >
                   <Image
                     src={service.icon}
                     alt={service.name}
                     width={55}
                     height={55}
+                    data-qa={`service-icon-${service.id}`}
                   />
-                  <h3 className="">
+                  <h3 data-qa={`service-name-${service.id}`}>
                     <span>{service.name.split(" ")[0]}</span>
                     &nbsp;
                     {service.name.split(" ")[1]}
                   </h3>
-                  <small className="text-accent-foreground mt-6 text-base text-center">
+                  <small
+                    className="text-accent-foreground mt-6 text-base text-center"
+                    data-qa={`service-description-${service.id}`}
+                  >
                     {service.description}
                   </small>
                 </div>
@@ -54,7 +69,7 @@ export default function page() {
                   <Button
                     variant="plain"
                     className="align-self-flex-end"
-                    size="sm"
+                    size="sm" 
                   >
                     Learn more
                   </Button>

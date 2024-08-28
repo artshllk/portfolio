@@ -35,7 +35,7 @@ This is the source code for my personal portfolio website built using Next.js, S
 ├── public/                 # Public assets such as images, icons, etc.
 ├── styles/                 # Tailwind CSS configuration
 ├── utils/                  # Utility to store functions, data, and configurations
-└── testing/                # testing folder
+└── testing/                # Testing folder
     ├── playwright          # Playwright tests
     │   ├── pageHelpers     # Page object helpers
     │   └── tests           # Test files
@@ -44,35 +44,35 @@ This is the source code for my personal portfolio website built using Next.js, S
 
 ## 🚀 Getting Started
 
-# Clone the repository:
+### Clone the repository:
 
 - **git clone https://github.com/ArtShllaku/portfolio.git**
 
-# Install dependencies:
+### Install dependencies:
 
 - **cd portfolio**
 - **pnpm install**
 
-# Run the development server:
+### Run the development server:
 
 - **pnpm dev**
 
-# Open the website in your browser:
+### Open the website in your browser:
 
 - **http://localhost:3000**
 
 
 ## 🧪 Running Tests
 
-# Install Playwright browsers:
+### Install Playwright browsers:
 
 - **pnpm exec playwright install --with-deps**
 
-# Run Playwright tests:
+### Run Playwright tests:
 
 - **pnpm exec playwright test**
 
-# View the test report:
+### View the test report:
 
 - **pnpm exec playwright show-report**
 

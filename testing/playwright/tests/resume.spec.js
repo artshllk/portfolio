@@ -1,11 +1,8 @@
 import test from "@playwright/test";
-import { Homepage } from "../pageHelpers/Homepage";
-import { Contact } from "../pageHelpers/Contact";
-import { Projects } from "../pageHelpers/Projects";
 import { Resume } from "../pageHelpers/Resume";
 
 test.describe("Resume page", () => {
-  test("View resume page and tabs", async ({ page, isMobile }) => {
+  test("Should navigate to the resume page and verify tab contents", async ({ page, isMobile }) => {
     const resume = new Resume(page, isMobile);
 
     await resume.goToResume();

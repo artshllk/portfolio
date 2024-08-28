@@ -1,10 +1,8 @@
 import test from "@playwright/test";
-import { Homepage } from "../pageHelpers/Homepage";
-import { Contact } from "../pageHelpers/Contact";
 import { Projects } from "../pageHelpers/Projects";
 
-test.describe("Projects page", () => {
-  test("View projects", async ({ page, isMobile }) => {
+test.describe("Navigate and validate projects", () => {
+  test("Ensure project details are correctly displayed and navigable", async ({ page, isMobile }) => {
     const projects = new Projects(page, isMobile);
 
     await projects.goToProjects();
@@ -21,3 +19,4 @@ test.describe("Projects page", () => {
     await projects.checkProject("Invitation Party App");
   });
 });
+ 

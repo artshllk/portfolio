@@ -1,9 +1,8 @@
 import test from "@playwright/test";
-import { Homepage } from "../pageHelpers/Homepage";
 import { Contact } from "../pageHelpers/Contact";
 
 test.describe("Contact page", () => {
-  test("Submit a message", async ({ page, isMobile }) => {
+  test("Should submit a message and verify confirmation", async ({ page, isMobile }) => {
     const contact = new Contact(page, isMobile);
 
     await contact.gotoContactForm();

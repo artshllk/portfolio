@@ -90,7 +90,7 @@ export default function Projects() {
               {currentProject?.desc}
             </p>
             <div
-              className="mt-2 text-primary font-semibold tracking-wider space-x-2"
+              className="mt-2 text-primary font-semibold tracking-wider space-x-3 space-y-2"
               data-qa="project-stack"
             >
               {currentProject?.stack?.map((item) => (

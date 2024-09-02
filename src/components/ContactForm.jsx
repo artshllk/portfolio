@@ -49,14 +49,14 @@ const ContactForm = () => {
     })
       .then(async (res) => {
         const data = await res.json();
-        console.log("DATAAAA", data);
-        toast({
-          title: "Message sent!",
-          description: "Thank you for your message!",
-        });
-        form.reset();
+        if (data?.id) {
+          toast({
+            title: "Message sent!",
+            description: "Thank you for your message!",
+          });
+          form.reset();
+        }
       })
-
       .catch((err) => console.log(err));
   };
 

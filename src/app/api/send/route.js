@@ -17,9 +17,12 @@ export async function POST(req) {
       }),
     });
 
+    if (error) {
+      return Response.json({ error }, { status: 500 });
+    }
+
     return Response.json(data);
   } catch (error) {
-    console.error("ERROR", error);
-    return Response.json({ error: "Internal Server Error" }, { status: 500 });
+    return Response.json({ error }, { status: 500 });
   }
 }

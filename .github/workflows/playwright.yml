@@ -30,10 +30,10 @@ jobs:
       - name: Install Playwright Browsers
         run: pnpm exec playwright install --with-deps
 
-      - name: Set NODE_ENV to production
-        run: echo "NODE_ENV=production" >> $GITHUB_ENV
-
       - name: Run Playwright tests
+        env:
+          NODE_ENV: production
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
         run: pnpm exec playwright test
 
       - uses: actions/upload-artifact@v4

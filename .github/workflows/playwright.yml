@@ -38,7 +38,7 @@ jobs:
 
       - name: Run Playwright tests
         env:
-          NODE_ENV: production
+          PRODUCTION_BASE_URL: "https://artshllaku-portfolio.vercel.app/"
           RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
         run: pnpm exec playwright test
 

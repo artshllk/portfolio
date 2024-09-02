@@ -16,7 +16,7 @@ const ExperienceSection = () => {
           <p className="text-accent-foreground mt-2">
             <strong>Automation Engineer - Fresha (London, UK) - Remote</strong>{" "}
             <br />
-            <em>Dec 2023 - Present</em>
+            <em>Aug 2023 - Present</em>
           </p>
           <ul className="list-disc list-inside mt-2">
             <li>
@@ -58,7 +58,7 @@ const ExperienceSection = () => {
               UK) - Remote
             </strong>{" "}
             <br />
-            <em>Oct 2022 - Dec 2023</em>
+            <em>Apr 2022 - Jul 2023</em>
           </p>
           <ul className="list-disc list-inside mt-2">
             <li>
@@ -92,7 +92,7 @@ const ExperienceSection = () => {
               Kosovo)
             </strong>{" "}
             <br />
-            <em>Jan 2022 - Sep 2022</em>
+            <em>Sep 2021 - Mar 2022</em>
           </p>
           <ul className="list-disc list-inside mt-2">
             <li>

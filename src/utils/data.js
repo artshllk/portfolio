@@ -57,7 +57,7 @@ export const SERVICES = Object.freeze([
   },
   {
     id: 2,
-    name: "Frontend Engineer",
+    name: "Frontend Development",
     icon: "/assets/front-end.png",
     description:
       "I can develop and design user interfaces for your web application. I have experience with React.js and other frontend technologies.",

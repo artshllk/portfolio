@@ -12,7 +12,6 @@ const ExperienceSection = () => {
       <CarouselContent>
         <CarouselItem>
           <h6>Professional Experience</h6>
-
           <p className="text-accent-foreground mt-2">
             <strong>Automation Engineer - Fresha (London, UK) - Remote</strong>{" "}
             <br />
@@ -52,6 +51,7 @@ const ExperienceSection = () => {
         </CarouselItem>
 
         <CarouselItem>
+          <h6>Professional Experience</h6>
           <p className="text-accent-foreground mt-4">
             <strong>
               Front-End Engineer & Cypress Lead - Pabau Clinic Software (London,
@@ -86,6 +86,7 @@ const ExperienceSection = () => {
         </CarouselItem>
 
         <CarouselItem>
+          <h6>Professional Experience</h6>
           <p className="text-accent-foreground mt-4">
             <strong>
               Junior Front-End Developer - KosovoOutSource LLC (Pristina,

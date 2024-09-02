@@ -37,11 +37,16 @@
   }
 
   h1 span,
-  h3 span {
+  h3 span,
+  h2 span {
     @apply text-primary;
   }
 
   h3 {
+    @apply sm:text-3xl text-2xl font-semibold;
+  }
+
+  h2 {
     @apply sm:text-3xl text-2xl font-semibold;
   }
 

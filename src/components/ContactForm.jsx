@@ -48,8 +48,9 @@ const ContactForm = () => {
       },
     })
       .then(async (res) => {
-        const data = await res.json();
-        if (data?.id) {
+        const responseData = await res.json();
+        console.log("Response Data:", responseData);
+        if (responseData?.id) {
           toast({
             title: "Message sent!",
             description: "Thank you for your message!",

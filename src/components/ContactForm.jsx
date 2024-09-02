@@ -57,7 +57,12 @@ const ContactForm = () => {
           form.reset();
         }
       })
-      .catch((err) => console.log(err));
+      .catch((err) => {
+        toast({
+          title: "Message failed to send!",
+          description: "Error: " + err,
+        });
+      });
   };
 
   return (

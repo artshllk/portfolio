@@ -2,7 +2,10 @@ import test from "@playwright/test";
 import { Contact } from "../pageHelpers/Contact";
 
 test.describe("Contact page", () => {
-  test("Should submit a message and verify confirmation", async ({ page, isMobile }) => {
+  test("Should submit a message and verify confirmation", async ({
+    page,
+    isMobile,
+  }) => {
     const contact = new Contact(page, isMobile);
 
     await contact.gotoContactForm();

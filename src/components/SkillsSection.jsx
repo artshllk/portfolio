@@ -42,6 +42,10 @@ const SkillsSection = () => {
       <p className="text-accent-foreground mt-2">
         <strong>Selenium:</strong> Recently, I worked on a personal project using Selenium for browser automation. It's been a great tool to get hands-on experience with web testing.
       </p>
+
+      <p className="text-accent-foreground mt-2">
+        <strong>Mobile QA:</strong> I perform mobile testing on both websites and apps across multiple devices. This allows me to ensure that everything works well on various screen sizes and mobile environments.
+      </p>
     </>
   );
 };

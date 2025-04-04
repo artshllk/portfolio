@@ -2,38 +2,45 @@ const SkillsSection = () => {
   return (
     <>
       <h6>What I Do</h6>
+      
       <p className="text-accent-foreground mt-2">
-        <strong>JavaScript:</strong> Proficient in writing clean, efficient, and
-        maintainable code using JavaScript. Experience in building interactive
-        front-end applications, implementing complex logic, and handling
-        asynchronous operations.
+        <strong>JavaScript:</strong> I write clean and easy-to-understand code with JavaScript. I've built interactive websites and know how to work with logic and async stuff like API calls.
       </p>
+      
       <p className="text-accent-foreground mt-2">
-        <strong>Cypress:</strong> Expertise in end-to-end testing with Cypress,
-        ensuring high test coverage and reliability. Led successful test
-        migrations and optimized test suites to improve performance and reduce
-        flakiness.
+        <strong>Cypress:</strong> I use Cypress to test how websites work from start to finish. I've helped move tests over to Cypress and made them faster and more stable.
       </p>
+      
       <p className="text-accent-foreground mt-2">
-        <strong>Playwright:</strong> Specialized in using Playwright for
-        automated browser testing. Proven track record of enhancing test
-        efficiency, streamlining test logic, and improving pipeline reliability.
+        <strong>Playwright:</strong> I test websites automatically using Playwright. I've made tests faster and helped make sure they work well in CI/CD pipelines.
       </p>
+      
       <p className="text-accent-foreground mt-2">
-        <strong>React.js:</strong> Skilled in developing responsive and
-        user-friendly web interfaces using React.js. Familiar with React hooks,
-        state management, and component-based architecture.
+        <strong>React.js:</strong> I build responsive and easy-to-use user interfaces with React. I'm comfortable with hooks, state, and breaking things into components.
       </p>
+      
       <p className="text-accent-foreground mt-2">
-        <strong>TypeScript:</strong> Experienced in utilizing TypeScript for
-        building robust and type-safe applications. Strong understanding of type
-        annotations, interfaces, and generics to enhance code quality.
+        <strong>TypeScript:</strong> I use TypeScript to catch bugs early and keep code organized. I understand how to use types and interfaces to make code safer.
       </p>
+      
       <p className="text-accent-foreground mt-2">
-        <strong>GitHub Actions:</strong> Proficient in automating CI/CD
-        pipelines with GitHub Actions. Created reusable workflows to optimize
-        deployment processes and enhance maintainability across engineering
-        teams.
+        <strong>GitHub Actions:</strong> I set up automated workflows with GitHub Actions to help with testing and deployments. I've created reusable setups that save time for the team.
+      </p>
+
+      <p className="text-accent-foreground mt-2">
+        <strong>Postman:</strong> I use Postman to test APIs manually. It's helpful when checking responses and making sure endpoints are working like they should.
+      </p>
+
+      <p className="text-accent-foreground mt-2">
+        <strong>BrowserStack:</strong> I test websites on different browsers and devices using BrowserStack, so everything works smoothly for everyone.
+      </p>
+
+      <p className="text-accent-foreground mt-2">
+        <strong>Tracking Tools:</strong> I’ve worked with Jira, Trello, Azure DevOps, and ClickUp to track tasks, bugs, and progress. It helps keep things organized and clear.
+      </p>
+
+      <p className="text-accent-foreground mt-2">
+        <strong>Selenium:</strong> Recently, I worked on a personal project using Selenium for browser automation. It's been a great tool to get hands-on experience with web testing.
       </p>
     </>
   );

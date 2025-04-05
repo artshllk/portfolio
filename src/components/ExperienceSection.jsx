@@ -11,118 +11,111 @@ const ExperienceSection = () => {
     <>
       <CarouselContent>
         <CarouselItem>
-          <h6>Professional Experience</h6>
+          <h6>Work Experience</h6>
           <p className="text-accent-foreground mt-2">
-            <strong>Automation Engineer - Fresha (London, UK) - Remote</strong>{" "}
+            <strong>Automation Engineer – Fresha (London, UK) – Remote</strong>
             <br />
-            <em>Aug 2023 - Present</em>
+            <em>Aug 2023 – Oct 2024</em>
           </p>
           <ul className="list-disc list-inside mt-2">
             <li>
-              Successfully led the migration of ~2000 E2E tests from Cypress to
-              Playwright, reducing test flakes by 15% and increasing overall
-              pipeline reliability.
+              Moved ~2000 tests from Cypress to Playwright, making tests more
+              stable and reducing random failures.
             </li>
             <li>
-              Refactored CI/CD pipelines by creating reusable actions for GitHub
-              Actions, improving maintainability and increasing the deployment
-              velocity of the whole engineering team.
+              Improved CI/CD setup by creating reusable GitHub Actions, which
+              helped the team deploy faster.
             </li>
             <li>
-              Optimized Playwright test suite efficiency and improved overall
-              coverage by streamlining test logic, refining selectors, and
-              eliminating unnecessary waits.
+              Made Playwright tests run better by cleaning up the code and
+              removing unnecessary waits.
             </li>
             <li>
-              Authored comprehensive documentation on Playwright best practices,
-              providing guidance and hands-on support to product teams.
+              Wrote easy-to-follow docs for Playwright to help other teams
+              understand and use it well.
             </li>
             <li>
-              Continuously refined and adjusted linting rules to help maintain a
-              clean and consistent test codebase with minimal impact to
-              developer experience.
+              Updated linting rules to keep test code clean and consistent
+              without making things harder for developers.
             </li>
             <li>
-              Collaborated closely with development teams, conducted thorough
-              code reviews, and championed testing best practices across the
-              organization, fostering a culture of quality and reliability.
+              Worked closely with developers, did code reviews, and helped bring
+              better testing habits to the team.
             </li>
           </ul>
         </CarouselItem>
 
         <CarouselItem>
-          <h6>Professional Experience</h6>
+          <h6>Work Experience</h6>
           <p className="text-accent-foreground mt-4">
             <strong>
-              Front-End Engineer & Cypress Lead - Pabau Clinic Software (London,
-              UK) - Remote
-            </strong>{" "}
+              Front-End Engineer & Cypress Lead – Pabau Clinic Software (London,
+              UK) – Remote
+            </strong>
             <br />
-            <em>Apr 2022 - Jul 2023</em>
+            <em>Apr 2022 – Jul 2023</em>
           </p>
           <ul className="list-disc list-inside mt-2">
             <li>
-              Developed reusable components and addressed critical bugs in the
-              product during the initial phase as a React Engineer.
+              Built reusable components and fixed important bugs while working
+              as a React developer.
             </li>
             <li>
-              Transitioned to Cypress Lead, managing a team of three, and took
-              ownership of the entire E2E testing module.
+              Promoted to Cypress Lead, managed a team of 3, and handled all
+              end-to-end testing.
             </li>
             <li>
-              Implemented and maintained comprehensive test suites, ensuring
-              robust test coverage and reliability.
+              Created and maintained reliable test suites with good test
+              coverage.
             </li>
             <li>
-              Led the transition to mock testing by successfully disconnecting
-              Cypress from the database, minimizing flakiness and enhancing test
-              stability.
+              Disconnected Cypress from the database by using mock data, which
+              made tests faster and more stable.
             </li>
             <li>
-              Streamlined the testing process by mocking necessary responses,
-              significantly improving the efficiency of the testing framework.
+              Improved the whole testing setup by mocking only what was needed,
+              making the process quicker.
             </li>
           </ul>
         </CarouselItem>
 
         <CarouselItem>
-          <h6>Professional Experience</h6>
+          <h6>Work Experience</h6>
           <p className="text-accent-foreground mt-4">
             <strong>
-              Junior Front-End Developer - KosovoOutSource LLC (Pristina,
+              Junior Front-End Developer – KosovoOutSource LLC (Pristina,
               Kosovo)
-            </strong>{" "}
+            </strong>
             <br />
-            <em>Sep 2021 - Mar 2022</em>
+            <em>Sep 2021 – Mar 2022</em>
           </p>
           <ul className="list-disc list-inside mt-2">
             <li>
-              Began learning React and its core principles, gaining hands-on
-              experience with the framework.
+              Started learning React by building small projects and getting
+              hands-on experience.
             </li>
             <li>
-              Developed simple UI components by translating Figma designs into
-              code, focusing on building visually accurate and functional
-              elements.
+              Turned Figma designs into working UI components, focusing on looks
+              and functionality.
             </li>
             <li>
-              Executed straightforward tasks, contributing to the overall UI
-              development while enhancing React skills.
+              Worked on simple tasks to support the team and improve my skills
+              in front-end development.
             </li>
           </ul>
         </CarouselItem>
       </CarouselContent>
 
-      {/* Display CarouselNext and CarouselPrevious only on desktop */}
+      {/* Show buttons only on desktop */}
       <div className="hidden md:flex justify-between mt-4">
         <CarouselPrevious />
         <CarouselNext />
       </div>
 
-      {/* Display swipe message only on mobile */}
+      {/* Show swipe message only on mobile */}
       <div className="flex md:hidden justify-center mt-4">
         <p className="text-sm text-yellow-400">
-          Swipe right to view more experiences
+          Swipe right to see more experience
         </p>
       </div>
     </>

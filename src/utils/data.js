@@ -53,21 +53,35 @@ export const SERVICES = Object.freeze([
     name: "Automation Testing",
     icon: "/automation.png",
     description:
-      "I can help you automate your web application testing using tools like Playwright, Cypress, and Jest. This can save you time and effort, and help to ensure that your application is working correctly.",
+      "I can help automate your web application testing using tools like Playwright, Cypress, Selenium, and Jest. By automating tests, I help save time and ensure your application works correctly across different environments.",
   },
   {
     id: 2,
     name: "Frontend Development",
     icon: "/assets/front-end.png",
-    description:
-      "I can develop and design user interfaces for your web application. I have experience with React.js and other frontend technologies.",
+    description: 
+      "I specialize in building user-friendly web interfaces. Using technologies like JavaScript, React.js, TypeScript, and Next.js, I can bring your ideas to life with responsive and clean designs that enhance user experience.",
   },
   {
     id: 3,
     name: "Manual Testing",
     icon: "/manual.png",
     description:
-      "I can also perform manual testing of your web application to identify any bugs or usability issues. This can be a valuable way to catch issues that automation may miss.",
+      "I also perform thorough manual testing to find bugs and usability issues that automated tests may miss. This can help ensure a better user experience and catch edge cases in your web app.",
+  },
+  {
+    id: 4,
+    name: "Mobile Testing",
+    icon: "/mobile.png",
+    description:
+      "I test websites and apps on multiple devices to ensure they work well on both mobile and desktop. This helps make sure that your users have a great experience, regardless of the device they use.",
+  },
+  {
+    id: 5,
+    name: "CI/CD Setup with GitHub Actions",
+    icon: "/ci-cd.png",
+    description:
+      "I set up continuous integration and continuous delivery (CI/CD) pipelines using GitHub Actions. This automates testing and deployment, improving the speed and reliability of your workflow.",
   },
 ]);
 

@@ -72,7 +72,7 @@ export const SERVICES = Object.freeze([
   {
     id: 4,
     name: "Mobile Testing",
-    icon: "/mobile-qa.jpg",
+    icon: "/beta-testing.png",
     description:
       "I test websites and apps on multiple devices to ensure they work well on both mobile and desktop. This helps make sure that your users have a great experience, regardless of the device they use.",
   },

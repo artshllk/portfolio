@@ -72,14 +72,14 @@ export const SERVICES = Object.freeze([
   {
     id: 4,
     name: "Mobile Testing",
-    icon: "/beta-testing.png",
+    icon: "/assets/beta-testing.png",
     description:
       "I test websites and apps on multiple devices to ensure they work well on both mobile and desktop. This helps make sure that your users have a great experience, regardless of the device they use.",
   },
   {
     id: 5,
     name: "CI/CD Setup with GitHub Actions",
-    icon: "/cicd.png",
+    icon: "/assets/cicd.png",
     description:
       "I set up continuous integration and continuous delivery (CI/CD) pipelines using GitHub Actions. This automates testing and deployment, improving the speed and reliability of your workflow.",
   },

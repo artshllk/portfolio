@@ -27,7 +27,7 @@ export default function page() {
           data-qa="profile-details"
         >
           <MotionImage
-            src="/art.jpeg"
+            src="/artp.jpg"
             alt="profile"
             width={155}
             height={155}
@@ -65,7 +65,7 @@ export default function page() {
             size="lg"
             data-qa="automation-engineer-button"
           >
-            Automation Engineer
+            QA Automation Engineer
           </MotionButton>
           <MotionButton
             variants={variants.moveUp}

@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { ChevronLeft, ChevronRight } from "lucide-react";
@@ -16,16 +16,28 @@ import { PROJECTS } from "@/utils/data";
 import { transition, variants } from "@/utils/framer_variants";
 import { MotionDiv } from "@/utils/motionTags";
 import { motion, AnimatePresence } from "framer-motion";
+import NoticeModal from "@/components/NoticeModal";
 
 export default function Projects() {
   const [currentProject, setCurrentProject] = useState(PROJECTS[0]);
   const [swiper, setSwiper] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
+  const [showNotice, setShowNotice] = useState(false);
 
   const onSlideChange = (item) => {
     setCurrentProject(PROJECTS[item?.activeIndex]);
   };
+
+  useEffect(() => {
+    setShowNotice(true);
+
+    const timer = setTimeout(() => {
+      setShowNotice(false);
+    }, 30000);
+
+    return () => clearTimeout(timer);
+  }, []);
 
   const index =
     PROJECTS.findIndex((project) => project.title === currentProject.title) + 1;
@@ -53,6 +65,7 @@ export default function Projects() {
       className="grid place-items-center lg:pt-0 sm:pt-32 pt-20 min-h-screen container"
       data-qa="projects-container"
     >
+      {showNotice && <NoticeModal />}
       <div className="mt-12" data-qa="projects-section">
         <MotionDiv
           animate="animate"
@@ -253,6 +266,25 @@ export default function Projects() {
           </motion.div>
         )}
       </AnimatePresence>
+
+      {/* <AnimatePresence>
+        {showNotice && (
+          <motion.div
+            initial={{ opacity: 0, y: -50 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -50 }}
+            className="fixed top-5 left-1/2 transform -translate-x-1/2 bg-white shadow-lg rounded-lg p-6 z-50 w-[90%] max-w-md border border-primary"
+          >
+            <h2 className="text-xl font-bold mb-2 text-primary">📢 NOTICE</h2>
+            <p className="text-accent-foreground">
+              As a QA Automation Engineer, most of my work involves testing
+              infrastructure, automation, and writing test suites. While not all
+              of it is visible through UI projects, my contributions include
+              reliability, performance, and clean CI/CD pipelines.
+            </p>
+          </motion.div>
+        )}
+      </AnimatePresence> */}
     </div>
   );
 }

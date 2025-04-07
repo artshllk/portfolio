@@ -113,16 +113,6 @@ export const PROJECTS = Object.freeze([
     stack: ["HTML", "CSS", "Javascript"],
   },
   {
-    id: 3,
-    title: "Invitation Party App",
-    desc: "A party invitation app built with TypeScript, allowing you to effortlessly manage your guest list by adding and removing invitees.",
-    category: "Frontend Development",
-    github: "https://github.com/artshllk/party-invitation-app",
-    preview: "https://party-invitation-app.vercel.app/",
-    image: "/assets/party-invitation.png",
-    stack: ["HTML", "CSS", "Javascript", "Typescript"],
-  },
-  {
     id: 4,
     title: "Speed Typing Game",
     desc: "A speed typing game to test and improve your typing speed. See how fast you can type the displayed text within a set time limit.",

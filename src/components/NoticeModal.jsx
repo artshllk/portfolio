@@ -72,9 +72,16 @@ export default function NoticeModal() {
                   >
                     GitHub
                   </a>{" "}
-                  or contact me directly to book a 30-minute call. I’d be happy
-                  to share more about my QA background and how I approach
-                  automation in a professional setting.
+                  or{" "}
+                  <a
+                    href="mailto:artshllaku48@gmail.com"
+                    className="text-blue-600 hover:text-blue-800 font-medium underline transition-colors"
+                  >
+                    contact me
+                  </a>{" "}
+                  directly to book a 30-minute call. I’d be happy to share more
+                  about my QA background and how I approach automation in a
+                  professional setting.
                 </p>
               </div>
             </div>

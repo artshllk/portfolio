@@ -48,21 +48,22 @@ export default function NoticeModal() {
                   <strong className="text-blue-600">
                     QA Automation Engineer
                   </strong>
-                  , these projects serve primarily as a playground for
-                  sharpening my JavaScript skills. They are not necessarily
-                  indicative of my professional QA capabilities.
+                  , these projects primarily serve as a playground for
+                  sharpening my JavaScript skills. They're not direct
+                  reflections of my professional QA expertise.
                 </p>
 
                 <p>
-                  My day-to-day involves a blend of{" "}
+                  In my day-to-day role, I work across{" "}
                   <strong className="text-green-600">manual testing</strong> and{" "}
-                  <strong className="text-purple-600">automation</strong>, with
-                  contributions encompassing reliability, performance, and
-                  streamlined CI/CD pipelines.
+                  <strong className="text-purple-600">automation</strong>,
+                  contributing to test reliability, performance, and CI/CD
+                  pipeline optimization.
                 </p>
 
                 <p>
-                  For a deeper dive into my automation work, visit my{" "}
+                  For more on my automation work and real-world QA experience,
+                  feel free to check out my{" "}
                   <a
                     href="https://github.com/artshllk"
                     className="text-blue-600 hover:text-blue-800 font-medium underline transition-colors"
@@ -70,10 +71,10 @@ export default function NoticeModal() {
                     rel="noopener noreferrer"
                   >
                     GitHub
-                  </a>
-                  . Feel free to contact me directly if you're interested in
-                  collaborating or wish to explore my professional experience
-                  further and discover what I can bring to your team.
+                  </a>{" "}
+                  or contact me directly to book a 30-minute call. I’d be happy
+                  to share more about my QA background and how I approach
+                  automation in a professional setting.
                 </p>
               </div>
             </div>

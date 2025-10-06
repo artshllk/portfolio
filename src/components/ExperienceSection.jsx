@@ -12,7 +12,7 @@ const ExperienceSection = () => {
         <CarouselItem>
           <h6>Work Experience</h6>
           <p className="text-accent-foreground mt-2">
-            <strong>QA Engineer – Ritech AG (Client: Advantage Solutions, US) – Remote</strong>
+            <strong>QA Engineer – Ritech AG (Client: Advantage Solutions, US)</strong>
             <br />
             <em>Oct 2024 – Present</em>
           </p>

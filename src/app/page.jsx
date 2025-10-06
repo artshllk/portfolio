@@ -6,7 +6,6 @@ import { transition, variants } from "@/utils/framer_variants";
 import { MotionButton, MotionDiv } from "@/utils/motionTags";
 import { DownloadIcon } from "lucide-react";
 import { Luckiest_Guy } from "next/font/google";
-import ART_SHLLAKU_CV from "../../public/assets/ART_SHLLAKU_CV.pdf";
 import Script from "next/script";
 
 const font = Luckiest_Guy({
@@ -63,7 +62,7 @@ export default function page() {
           </h1>
         </MotionDiv>
         <br />
-        <a href={ART_SHLLAKU_CV} download="CV" target="_blank" data-qa="download-link">
+        <a href="/assets/Art_Shllaku_CV.pdf" download="Art_Shllaku_CV.pdf" target="_blank" rel="noopener">
           <MotionButton
             whileHover={{ scale: 0.95 }}
             initial="initial"

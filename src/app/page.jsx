@@ -3,7 +3,7 @@
 import { cn } from "@/lib/utils";
 import { SOCIAL_MEDIA } from "@/utils/data";
 import { transition, variants } from "@/utils/framer_variants";
-import { MotionButton, MotionDiv, MotionImage } from "@/utils/motionTags";
+import { MotionButton, MotionDiv } from "@/utils/motionTags";
 import { DownloadIcon } from "lucide-react";
 import { Luckiest_Guy } from "next/font/google";
 import ART_SHLLAKU_CV from "../../public/assets/ART_SHLLAKU_CV.pdf";
